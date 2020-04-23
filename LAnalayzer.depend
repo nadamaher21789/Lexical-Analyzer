@@ -1,0 +1,89 @@
+# depslib dependency file v1.0
+1587684591 source:d:\nada\collegework\csedterm6\compilers\project\phase1\lanalayzer\main.cpp
+	<iostream>
+	<bitset>
+	<vector>
+	<set>
+	<stack>
+	<queue>
+	<cstdio>
+	<fstream>
+	"NFA.h"
+	"Re_to_NFA.h"
+	"ReadRules.h"
+	"Minimization.h"
+	"TestAnalyzer.h"
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+
+1585253791 d:\nada\collegework\csedterm6\compilers\project\phase1\lanalayzer\include\dfa.h
+	<bits/stdc++.h>
+
+1585260781 source:d:\nada\collegework\csedterm6\compilers\project\phase1\lanalayzer\src\dfa.cpp
+	"DFA.h"
+	<iostream>
+	<iterator>
+	<vector>
+	<unordered_map>
+	<unordered_set>
+
+1587684097 source:d:\nada\collegework\csedterm6\compilers\project\phase1\lanalayzer\src\testanalyzer.cpp
+	"TestAnalyzer.h"
+	<iostream>
+	<fstream>
+
+1587149137 d:\nada\collegework\csedterm6\compilers\project\phase1\lanalayzer\include\testanalyzer.h
+	"Minimization.h"
+
+1585867153 source:d:\nada\collegework\csedterm6\compilers\project\phase1\lanalayzer\src\nfa.cpp
+	"NFA.h"
+	"vector"
+
+1585867137 d:\nada\collegework\csedterm6\compilers\project\phase1\lanalayzer\include\nfa.h
+	<vector>
+
+1587147357 source:d:\nada\collegework\csedterm6\compilers\project\phase1\lanalayzer\src\re_to_nfa.cpp
+	"Re_to_NFA.h"
+	"NFA.h"
+	"ReadRules.h"
+	<iostream>
+	<stack>
+	<string>
+	<cstring>
+
+1587146691 d:\nada\collegework\csedterm6\compilers\project\phase1\lanalayzer\include\re_to_nfa.h
+	"NFA.h"
+	<iostream>
+	<string>
+
+1587146886 d:\nada\collegework\csedterm6\compilers\project\phase1\lanalayzer\include\readrules.h
+	"map"
+	<iostream>
+	<string>
+	<bits/stdc++.h>
+
+1587148134 source:d:\nada\collegework\csedterm6\compilers\project\phase1\lanalayzer\src\readrules.cpp
+	"ReadRules.h"
+	<iostream>
+	<fstream>
+	<algorithm>
+	<string>
+	<vector>
+	<stdio.h>
+	<string.h>
+	<bits/stdc++.h>
+	<map>
+	"Re_to_NFA.h"
+
+1587678199 source:d:\nada\collegework\csedterm6\compilers\project\phase1\lanalayzer\src\minimization.cpp
+	"Minimization.h"
+	<iostream>
+	<iterator>
+	<vector>
+	<unordered_map>
+	<unordered_set>
+
+1585867194 d:\nada\collegework\csedterm6\compilers\project\phase1\lanalayzer\include\minimization.h
+	<bits/stdc++.h>
+
