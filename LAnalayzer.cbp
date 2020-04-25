@@ -35,17 +35,25 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/DFA.h" />
+		<Unit filename="include/First.h" />
 		<Unit filename="include/Minimization.h" />
 		<Unit filename="include/NFA.h" />
+		<Unit filename="include/Parsing.h" />
 		<Unit filename="include/Re_to_NFA.h" />
 		<Unit filename="include/ReadRules.h" />
 		<Unit filename="include/TestAnalyzer.h" />
+		<Unit filename="include/parse_table.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/DFA.cpp" />
+		<Unit filename="src/First.cpp" />
 		<Unit filename="src/Minimization.cpp" />
 		<Unit filename="src/NFA.cpp" />
+		<Unit filename="src/Parsing.cpp" />
 		<Unit filename="src/Re_to_NFA.cpp" />
 		<Unit filename="src/ReadRules.cpp" />
 		<Unit filename="src/TestAnalyzer.cpp" />
+		<Unit filename="src/parse_table.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

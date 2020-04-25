@@ -87,3 +87,161 @@
 1585867194 d:\nada\collegework\csedterm6\compilers\project\phase1\lanalayzer\include\minimization.h
 	<bits/stdc++.h>
 
+1587678199 source:d:\nada\collegework\csedterm6\compilers\project\phase1\lanalayzer - copy\src\minimization.cpp
+	"Minimization.h"
+	<iostream>
+	<iterator>
+	<vector>
+	<unordered_map>
+	<unordered_set>
+
+1585867194 d:\nada\collegework\csedterm6\compilers\project\phase1\lanalayzer - copy\include\minimization.h
+	<bits/stdc++.h>
+
+1585867153 source:d:\nada\collegework\csedterm6\compilers\project\phase1\lanalayzer - copy\src\nfa.cpp
+	"NFA.h"
+	"vector"
+
+1585867137 d:\nada\collegework\csedterm6\compilers\project\phase1\lanalayzer - copy\include\nfa.h
+	<vector>
+
+1587147357 source:d:\nada\collegework\csedterm6\compilers\project\phase1\lanalayzer - copy\src\re_to_nfa.cpp
+	"Re_to_NFA.h"
+	"NFA.h"
+	"ReadRules.h"
+	<iostream>
+	<stack>
+	<string>
+	<cstring>
+
+1587146691 d:\nada\collegework\csedterm6\compilers\project\phase1\lanalayzer - copy\include\re_to_nfa.h
+	"NFA.h"
+	<iostream>
+	<string>
+
+1587146886 d:\nada\collegework\csedterm6\compilers\project\phase1\lanalayzer - copy\include\readrules.h
+	"map"
+	<iostream>
+	<string>
+	<bits/stdc++.h>
+
+1587148134 source:d:\nada\collegework\csedterm6\compilers\project\phase1\lanalayzer - copy\src\readrules.cpp
+	"ReadRules.h"
+	<iostream>
+	<fstream>
+	<algorithm>
+	<string>
+	<vector>
+	<stdio.h>
+	<string.h>
+	<bits/stdc++.h>
+	<map>
+	"Re_to_NFA.h"
+
+1587855004 source:d:\nada\collegework\csedterm6\compilers\project\phase1\lanalayzer - copy\main.cpp
+	<iostream>
+	<bitset>
+	<vector>
+	<set>
+	<stack>
+	<queue>
+	<cstdio>
+	<fstream>
+	"NFA.h"
+	"Re_to_NFA.h"
+	"ReadRules.h"
+	"Minimization.h"
+	"TestAnalyzer.h"
+	"DFA.h"
+	"Parsing.h"
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+
+1587149137 d:\nada\collegework\csedterm6\compilers\project\phase1\lanalayzer - copy\include\testanalyzer.h
+	"Minimization.h"
+
+1587853295 d:\nada\collegework\csedterm6\compilers\project\phase1\lanalayzer - copy\include\dfa.h
+	<iostream>
+	<bitset>
+	<vector>
+	<set>
+	<stack>
+	<queue>
+	<cstdio>
+	<fstream>
+	"NFA.h"
+	"Re_to_NFA.h"
+	"ReadRules.h"
+	"Minimization.h"
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+
+1587853473 source:d:\nada\collegework\csedterm6\compilers\project\phase1\lanalayzer - copy\src\dfa.cpp
+	"DFA.h"
+
+1587685373 source:d:\nada\collegework\csedterm6\compilers\project\phase1\lanalayzer - copy\src\testanalyzer.cpp
+	"TestAnalyzer.h"
+	<iostream>
+	<fstream>
+
+1587854030 d:\nada\collegework\csedterm6\compilers\project\phase1\lanalayzer - copy\include\parsing.h
+
+1587857878 source:d:\nada\collegework\csedterm6\compilers\project\phase1\lanalayzer - copy\src\first.cpp
+	"First.h"
+	<iostream>
+	<fstream>
+	<algorithm>
+	<string>
+	<vector>
+	<stdio.h>
+	<string.h>
+	<bits/stdc++.h>
+	<map>
+
+1587853793 d:\nada\collegework\csedterm6\compilers\project\phase1\lanalayzer - copy\include\first.h
+	<iostream>
+	<fstream>
+	<algorithm>
+	<string>
+	<vector>
+	<stdio.h>
+	<string.h>
+	<bits/stdc++.h>
+	<map>
+
+1587857995 source:d:\nada\collegework\csedterm6\compilers\project\phase1\lanalayzer - copy\src\parse_table.cpp
+	"parse_table.h"
+	"First.h"
+	<vector>
+	<iostream>
+	<string>
+	<cstring>
+	<algorithm>
+	<stdio.h>
+	<bits/stdc++.h>
+
+1587853699 d:\nada\collegework\csedterm6\compilers\project\phase1\lanalayzer - copy\include\parse_table.h
+	<iostream>
+	<vector>
+	<string>
+	"First.h"
+
+1587857882 source:d:\nada\collegework\csedterm6\compilers\project\phase1\lanalayzer - copy\src\parsing.cpp
+	"Parsing.h"
+	<iostream>
+	<stack>
+	<string>
+	<string.h>
+	<queue>
+	"parse_table.h"
+	"First.h"
+	<vector>
+	<sstream>
+	<fstream>
+	<cstring>
+	<algorithm>
+	<stdio.h>
+	<bits/stdc++.h>
+

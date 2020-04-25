@@ -1,0 +1,5 @@
+# E = T EDASH
+# EDASH = '+' T EDASH | \L
+# T = F TDASH
+# TDASH = '*' F TDASH | \L
+# F = '(' E ')' | 'id'
