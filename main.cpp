@@ -24,7 +24,7 @@ int main()
     /* START PHASE ONE */
 
     /* start NFA and DFA */
-    /*DFA dfa;
+    DFA dfa;
     dfa.runDFA();
     vector<char> normalStates;
     vector<char> inputs;
@@ -55,7 +55,7 @@ int main()
 
     /* start minimization */
 
-    /*Minimization dfaMin;
+    Minimization dfaMin;
 
     vector<vector<char>> minim = dfaMin.minimize(newDfaStates, newDFaFinal, normalStates, inputs);
     vector<Minimization :: graph> output = dfaMin.minTable(minim, inputs,newDfaStates);
@@ -69,7 +69,7 @@ int main()
         outIt++;
     }*/
 
-    /*vector<char> ends = dfaMin.newEndStates(newDFaFinal, minim);
+    vector<char> ends = dfaMin.newEndStates(newDFaFinal, minim);
     char newStart = dfaMin.newStart('a', minim);
     unordered_map<char, string> m = dfaMin.endNames(name, newDFaFinal);
     cout << "Minimization done" << endl;
@@ -78,7 +78,7 @@ int main()
 
     /*  start test analyzer */
 
-    /*ReadRules r;
+    ReadRules r;
     map<string,pair<int,string>> regExp = r.returnExpr();
     vector<string> keys = r.returnKeyWords();
     unordered_map<string, int> priority;

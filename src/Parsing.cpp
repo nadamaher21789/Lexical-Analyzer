@@ -7,7 +7,7 @@
 #include "parse_table.h"
 #include "First.h"
 #include<vector>
- #include <sstream>
+#include <sstream>
 #include <fstream>
 #include <cstring>
 #include <algorithm>
@@ -54,22 +54,15 @@ void Parsing::parse ()
 {
 
     ptable.build_table();
-  /*  string str="a a b $";//input string
-    stringstream ss(str);
-    string item;
-    while (getline(ss, item, ' '))
-    {
-        tokens.push_back(item);
-    }
-*/
 // take input from file
     ifstream myfile;
     myfile.open("output.txt");
     vector<string> tokens;
 
     string line;
-     while(getline(myfile, line)) {
-     tokens.push_back(line);
+    while(getline(myfile, line))
+    {
+        tokens.push_back(line);
     }
     tokens.push_back("$");
     stack<string> s;
@@ -77,6 +70,10 @@ void Parsing::parse ()
 //push start symbol
     s.push(ptable.nonterminals.at(0));
 
+// open a file in write mode.
+
+    std::fstream fs;
+    fs.open ("final.txt", std::fstream::in | std::fstream::out | std::fstream::app);
     int i=0;
     while (i<tokens.size())
     {
@@ -84,10 +81,6 @@ void Parsing::parse ()
         string top = s.top();
         string current ;
         current =tokens.at(i);
-
-     //   cout << "top========="<<top<<endl;
-       // cout << "curr========="<<current<<endl;
-        //   i++;
 
         //successful completion
         if ((top.compare(current)) == 0 &&  ((top.compare("$")) == 0))
@@ -104,7 +97,6 @@ void Parsing::parse ()
         // top is terminal and equal current
         if (isTerminal(top) && ((top.compare(current)) == 0))
         {
-           // cout << "d5l========="<<endl;
 
             s.pop();
             i++;
@@ -132,8 +124,6 @@ void Parsing::parse ()
                 tokens1.push_back(item1);
             }
             bool flag= false;
-            //cout << "drow==="<<row<<"=col="<<col<<endl;
-            //cout << "d5al in 3==="<<productionRule<<endl;
             if (tokens1.size()==0)
             {
                 i++;
@@ -146,7 +136,6 @@ void Parsing::parse ()
                     string str1 ;
                     str1=tokens1.at(i);
                     str1.erase(std::remove(str1.begin(), str1.end(), '\''), str1.end());
-                    //cout << "**str1=******"<<str1<<endl;
                     if ((str1.compare("\\L")) == 0)
                     {
                         flag=true;
@@ -158,9 +147,6 @@ void Parsing::parse ()
                     }
                     else
                     {
-
-                        //cout << "dstriiiii==="<<str1<<endl;
-
                         s.push(str1);
                         flag=true;
                     }
@@ -170,10 +156,10 @@ void Parsing::parse ()
             if (flag == true)
             {
                 op.push(productionRule);
-            cout << "production rule : "<< top<< " -> "<<productionRule<<endl;
+                cout << "production rule : "<< top<< " -> "<<productionRule<<endl;
 
+                fs<<productionRule<<endl;
             }
-
 
         }
         else
@@ -181,14 +167,7 @@ void Parsing::parse ()
             //errorrr
         }
 
-        /*   if (top.compare("EDASH")==0){
-               top = s.top();
-
-           current =tokens.at(i);
-                                                               cout << "top**==="<<top<<endl;
-                                                       cout << "tcurr**=="<<current<<endl;
-
-                   break;
-                  }*/
     }
+
+    fs.close();
 }

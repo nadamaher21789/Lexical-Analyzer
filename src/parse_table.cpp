@@ -133,6 +133,10 @@ void parse_table::build_table()
             }
         }
     }
+    // open a file in write mode.
+        ofstream outfile;
+        outfile.open("final.txt");
+        outfile<<"------------------------THE TABLE---------------------------------"<<endl;
 
     for(int i = 0; i <nonterminals.size(); i++)
     {
@@ -142,7 +146,11 @@ void parse_table::build_table()
             {
                 table[i][j] = "X";
             }
-        }
-    }
-}
+            outfile <<"---"<< table[i][j] ;
 
+        }
+        outfile<<endl;
+    }
+        outfile<<"------------------End Of the table---------------------------------"<<endl;;
+
+}
