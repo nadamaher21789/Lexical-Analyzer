@@ -54,7 +54,7 @@ void Parsing::parse ()
 {
 
     ptable.build_table();
-// take input from file
+    // take input from file
     ifstream myfile;
     myfile.open("output.txt");
     vector<string> tokens;
@@ -67,11 +67,10 @@ void Parsing::parse ()
     tokens.push_back("$");
     stack<string> s;
     s.push("$");
-//push start symbol
+    //push start symbol
     s.push(ptable.nonterminals.at(0));
 
-// open a file in write mode.
-
+    // open a file in write mode.
     std::fstream fs;
     fs.open ("final.txt", std::fstream::in | std::fstream::out | std::fstream::app);
     int i=0;
@@ -97,6 +96,7 @@ void Parsing::parse ()
         // top is terminal and equal current
         if (isTerminal(top) && ((top.compare(current)) == 0))
         {
+            cout << top<<" MATCH==>>"<< current<<endl;
 
             s.pop();
             i++;
@@ -131,12 +131,21 @@ void Parsing::parse ()
             else
             {
                 s.pop();
-                for (int i=tokens1.size()-1; i>=0; i--)
+                for (int j=tokens1.size()-1; j>=0; j--)
                 {
                     string str1 ;
-                    str1=tokens1.at(i);
+                    str1=tokens1.at(j);
+                    char z=str1.at(0);
+                    if (  z == '\''){
                     str1.erase(std::remove(str1.begin(), str1.end(), '\''), str1.end());
-                    if ((str1.compare("\\L")) == 0)
+                    }
+                    if ((str1.compare("X")) == 0)
+                    {
+                        i++;
+                        cout<<"**EMPTY**"<<endl;
+
+                    }
+                    else if ((str1.compare("\\L")) == 0)
                     {
                         flag=true;
                         cout << "*****epsilon******"<<endl;
@@ -147,6 +156,7 @@ void Parsing::parse ()
                     }
                     else
                     {
+
                         s.push(str1);
                         flag=true;
                     }
@@ -159,7 +169,10 @@ void Parsing::parse ()
                 cout << "production rule : "<< top<< " -> "<<productionRule<<endl;
 
                 fs<<productionRule<<endl;
+
+
             }
+
 
         }
         else
