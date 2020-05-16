@@ -1,16 +1,25 @@
 ------------------------THE TABLE---------------------------------
----X---X---T EDASH---synch---T EDASH---synch
----'+' T EDASH---X---X---\L---X---\L
----synch---X---F TDASH---synch---F TDASH---synch
----\L---'*' F TDASH---X---\L---X---\L
----synch---synch---'(' E ')'---synch---'id'---synch
+---X---X---X---X---X---X---X---MODIFIER 'class' 'id' '{' CLASS_BODY '}'---MODIFIER 'class' 'id' '{' CLASS_BODY '}'---X---X---X---X---X---X---X---X---X---X---X---X---synch
+---X---ASSIGNMENT---X---\L---X---X---X---METHOD_LIST---METHOD_LIST---DECLARATION---DECLARATION---X---X---X---X---X---X---X---X---X---X---X
+---X---X---X---synch---X---X---X---METHOD_DECL METHOD_LIST&---METHOD_DECL METHOD_LIST&---X---X---X---X---X---X---X---X---X---X---X---X---X
+---X---X---X---\L---X---X---X---METHOD_DECL METHOD_LIST&---METHOD_DECL METHOD_LIST&---X---X---X---X---X---X---X---X---X---X---X---X---X
+---X---X---X---synch---X---X---X---MODIFIER PRIMITIVE_TYPE 'id' '(' ')' '{' METHOD_BODY '}'---MODIFIER PRIMITIVE_TYPE 'id' '(' ')' '{' METHOD_BODY '}'---X---X---X---X---X---X---X---X---X---X---X---X---X
+---X---STATEMENT_LIST---X---synch---X---X---X---X---X---STATEMENT_LIST---STATEMENT_LIST---STATEMENT_LIST---X---STATEMENT_LIST---X---X---X---X---X---X---X---X
+---X---STATEMENT STATEMENT_LIST&---X---synch---X---X---X---X---X---STATEMENT STATEMENT_LIST&---STATEMENT STATEMENT_LIST&---STATEMENT STATEMENT_LIST&---X---STATEMENT STATEMENT_LIST&---X---X---X---X---X---X---X---X
+---X---STATEMENT STATEMENT_LIST&---X---\L---X---X---X---X---X---STATEMENT STATEMENT_LIST&---STATEMENT STATEMENT_LIST&---STATEMENT STATEMENT_LIST&---X---STATEMENT STATEMENT_LIST&---X---X---X---X---X---X---X---X
+---X---ASSIGNMENT---X---synch---X---X---X---X---X---DECLARATION---DECLARATION---IF---X---WHILE---X---X---X---X---X---X---X---X
+---X---synch---X---synch---X---X---X---X---X---PRIMITIVE_TYPE 'id' ';'---PRIMITIVE_TYPE 'id' ';'---synch---X---synch---X---X---X---X---X---X---X---X
+---synch---X---X---X---X---X---X---'private'---'public'---synch---synch---X---X---X---X---X---X---X---X---X---X---X
+---X---synch---X---X---X---X---X---X---X---'int'---'float'---X---X---X---X---X---X---X---X---X---X---X
+---X---synch---X---synch---X---X---X---X---X---synch---synch---'if' '(' EXPRESSION ')' '{' STATEMENT '}' 'else' '{' STATEMENT '}'---X---synch---X---X---X---X---X---X---X---X
+---X---synch---X---synch---X---X---X---X---X---synch---synch---synch---X---'while' '(' EXPRESSION ')' '{' STATEMENT '}'---X---X---X---X---X---X---X---X
+---X---'id' '=' EXPRESSION ';'---X---synch---X---X---X---X---X---synch---synch---synch---X---synch---X---X---X---X---X---X---X---X
+---X---SIMPLE_EXPRESSION EXPRESSION&---X---X---SIMPLE_EXPRESSION EXPRESSION&---synch---synch---X---X---X---X---X---X---X---X---X---X---X---SIMPLE_EXPRESSION EXPRESSION&---SIMPLE_EXPRESSION EXPRESSION&---SIMPLE_EXPRESSION EXPRESSION&---X
+---X---X---X---X---X---\L---\L---X---X---X---X---X---X---X---X---'relop' SIMPLE_EXPRESSION---X---X---X---X---X---X
+---X---TERM SIMPLE_EXPRESSION&---X---X---TERM SIMPLE_EXPRESSION&---synch---synch---X---X---X---X---X---X---X---X---synch---X---X---TERM SIMPLE_EXPRESSION&---SIGN TERM SIMPLE_EXPRESSION&---SIGN TERM SIMPLE_EXPRESSION&---X
+---X---X---X---X---X---\L---\L---X---X---X---X---X---X---X---X---\L---'addop' TERM SIMPLE_EXPRESSION&---X---X---X---X---X
+---X---FACTOR TERM&---X---X---FACTOR TERM&---synch---synch---X---X---X---X---X---X---X---X---synch---synch---X---FACTOR TERM&---X---X---X
+---X---X---X---X---X---\L---\L---X---X---X---X---X---X---X---X---\L---\L---'mulop' FACTOR TERM&---X---X---X---X
+---X---'id'---X---X---'(' EXPRESSION ')'---synch---synch---X---X---X---X---X---X---X---X---synch---synch---synch---'num'---X---X---X
+---X---synch---X---X---synch---X---X---X---X---X---X---X---X---X---X---X---X---X---synch---'+'---'-'---X
 ------------------End Of the table---------------------------------
-T EDASH
-F TDASH
-'id'
-\L
-'+' T EDASH
-F TDASH
-'id'
-\L
-\L

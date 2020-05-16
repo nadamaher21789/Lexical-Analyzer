@@ -25,7 +25,7 @@ int start_symbol = 1;
 
 
 void First::readFile() {
-    std::ifstream file("CFG2.txt");
+    std::ifstream file("grammer.txt");
 
 
     string line;;

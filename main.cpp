@@ -100,7 +100,7 @@ int main()
 
     /*START PHASE TWO */
 
-    /*Parsing p;
+    Parsing p;
     p.parse();
     cout << "Parsing done" << endl;
 
