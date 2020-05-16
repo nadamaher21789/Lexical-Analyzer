@@ -217,6 +217,7 @@ void getNFa()
 
         stateName[t] = reToNfa.tokens[i];
     }
+
 // find f
     F=nfaFstate.size();
     int transSiza=oldNfa.transitions.size();
@@ -286,6 +287,7 @@ void DFA::runDFA()
     cout << "get new states done" << endl;
 }
 vector <Minimization :: graph> DFA ::getDfaStates(){
+
     return newDfaStates;
 }
 vector <char> DFA::getFinalStates(){

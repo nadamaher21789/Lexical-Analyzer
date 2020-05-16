@@ -1,6 +1,7 @@
 #include "TestAnalyzer.h"
 #include <iostream>
 #include <fstream>
+#include <ctype.h>
 using namespace std;
 
 TestAnalyzer::TestAnalyzer()
@@ -29,6 +30,7 @@ void TestAnalyzer :: analyze(vector<Minimization::graph> minimDfa, char startSta
     string l = "";
     int index = 0;
     string tempString = "";
+
     while(!done)
     {
         if(index >= l.length()){
@@ -40,6 +42,9 @@ void TestAnalyzer :: analyze(vector<Minimization::graph> minimDfa, char startSta
                 }
                 else{
                     l = line;
+                    if(l.length()== 0){
+                        continue;
+                    }
                     index = 0;
                 }
         }
@@ -56,7 +61,7 @@ void TestAnalyzer :: analyze(vector<Minimization::graph> minimDfa, char startSta
             index++;
         }
 
-        if(c == ' ')
+        if(isspace(c))
         {
             continue;
         }
@@ -82,7 +87,20 @@ void TestAnalyzer :: analyze(vector<Minimization::graph> minimDfa, char startSta
                     if((*minIt).from == (*itCurr) && (*minIt).input == c)
                     {
                         string s = isEnd(endStates, (*minIt).to, name, token);
-                        if(s != "no")
+                        if(s == "num"){
+                            int tempCount = 1;
+                            while(index < l.length() && !(isspace(c)) && (isdigit(c) || c == '.')){
+                                c = l.at(index);
+                                index++;
+                                token += c;
+                                tempCount++;
+                            }
+                            if(!isdigit(c)){
+                                index--;
+                            }
+                            allPossibilities[s] = tempCount;
+                        }
+                        else if(s != "no")
                         {
                             string tempS;
                             int tempCount = countPrefix - 1;
@@ -181,6 +199,9 @@ void TestAnalyzer :: analyze(vector<Minimization::graph> minimDfa, char startSta
             else if(match == "keyword" && !(find(keys.begin(), keys.end(), token) < keys.end())){
 
                 cout << "id" << endl;
+            }
+            else if(match == "id" && (find(keys.begin(), keys.end(), token) < keys.end())){
+                cout << token << endl;
             }
             else if(match == "!=")
             {

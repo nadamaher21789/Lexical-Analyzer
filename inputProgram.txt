@@ -1,6 +1,1 @@
-int x;
-x = 5;
-if (x > 2)
-{
-   x = 0;
-}
+int sum , count , pass , mnt; while (pass != 10)  { pass = pass + 1 ;  }

@@ -60,18 +60,19 @@ int main()
     vector<vector<char>> minim = dfaMin.minimize(newDfaStates, newDFaFinal, normalStates, inputs);
     vector<Minimization :: graph> output = dfaMin.minTable(minim, inputs,newDfaStates);
 
-    /*vector<Minimization :: graph> :: iterator outIt = output.begin();
+    vector<Minimization :: graph> :: iterator outIt = output.begin();
 
     cout << "New transitions : "<< endl;
     while(outIt < output.end())
     {
         cout << "FROM:  " << (*outIt).from << "  INPUT:  "<<(*outIt).input << "   TO:  " << (*outIt).to << endl;
         outIt++;
-    }*/
+    }
 
     vector<char> ends = dfaMin.newEndStates(newDFaFinal, minim);
     char newStart = dfaMin.newStart('a', minim);
     unordered_map<char, string> m = dfaMin.endNames(name, newDFaFinal);
+
     cout << "Minimization done" << endl;
 
     /* end minimization */
@@ -99,7 +100,7 @@ int main()
 
     /*START PHASE TWO */
 
-    Parsing p;
+    /*Parsing p;
     p.parse();
     cout << "Parsing done" << endl;
 

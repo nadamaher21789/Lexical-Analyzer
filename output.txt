@@ -1,11 +1,13 @@
 int
 id
-;
+,
 id
-assign
-num
+,
+id
+,
+id
 ;
-if
+while
 (
 id
 relop
@@ -14,6 +16,8 @@ num
 {
 id
 assign
+id
+addop
 num
 ;
 }

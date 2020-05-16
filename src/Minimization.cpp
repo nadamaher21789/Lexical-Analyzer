@@ -132,18 +132,6 @@ vector<vector<char>> Minimization :: minimize(vector<graph> dfa, vector<char> en
     }
     allSet.push_back(normalStates);
 
-    /*for(int i = 0; i < allSet.size(); i++){
-            vector<char> t = allSet[i];
-            for(int j = 0; j < t.size(); j++){
-                cout << t[j];
-            }
-            cout <<endl;
-    }*/
-    /*unordered_map<char,int> :: iterator t = statesMap.begin();
-    while(t != statesMap.end()){
-        cout << t -> first << "  " << t -> second << endl;
-        t++;
-    }*/
     bool done = false;
     while(!done)
     {
@@ -155,7 +143,6 @@ vector<vector<char>> Minimization :: minimize(vector<graph> dfa, vector<char> en
             vector<char> :: iterator itSet = (*itAll).begin();
             if((*itAll).size() != 1)
             {
-                //cout<< "da5al set  " << *itSet <<endl;
                 char prev = (*itSet);
                 itSet++;
                 while((itSet) < (*itAll).end())
@@ -164,12 +151,10 @@ vector<vector<char>> Minimization :: minimize(vector<graph> dfa, vector<char> en
                     bool doneInputs = false;
                     while(inIt < inputs.end() && !doneInputs)
                     {
-                        //cout << " da5al input " << *inIt <<endl;
                         int int1 = statesMap.find(goesTo(dfa, (*inIt), (*itSet)))->second;
                         int int2 = statesMap.find(goesTo(dfa, (*inIt), prev))->second;
                         if(int1 != int2)
                         {
-                            //cout<< "da5al" <<endl;
                             done = false;
                             vector<vector<char>>::iterator itAllTemp = allSet.begin();
                             bool doneReplacing = false;
@@ -278,13 +263,6 @@ vector<vector<char>> Minimization :: minimize(vector<graph> dfa, vector<char> en
         }
         i++;
     }
-       /* for(int i = 0; i < allSet.size(); i++){
-            vector<char> t = allSet[i];
-            for(int j = 0; j < t.size(); j++){
-                cout << t[j];
-            }
-            cout <<endl;
-    }*/
     return allSet;
 }
 vector<Minimization :: graph> Minimization :: minTable(vector<vector<char>> allSet, vector<char> inputs, vector<graph> dfa)

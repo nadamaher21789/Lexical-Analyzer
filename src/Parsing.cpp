@@ -169,11 +169,7 @@ void Parsing::parse ()
                 cout << "production rule : "<< top<< " -> "<<productionRule<<endl;
 
                 fs<<productionRule<<endl;
-
-
             }
-
-
         }
         else
         {
@@ -181,6 +177,5 @@ void Parsing::parse ()
         }
 
     }
-
     fs.close();
 }

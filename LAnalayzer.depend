@@ -245,7 +245,7 @@
 	<stdio.h>
 	<bits/stdc++.h>
 
-1587853473 source:d:\nada\collegework\csedterm6\compilers\project\phase2\lanalayzer + parser\src\dfa.cpp
+1589600251 source:d:\nada\collegework\csedterm6\compilers\project\phase2\lanalayzer + parser\src\dfa.cpp
 	"DFA.h"
 
 1587853295 d:\nada\collegework\csedterm6\compilers\project\phase2\lanalayzer + parser\include\dfa.h
@@ -282,7 +282,7 @@
 1585867194 d:\nada\collegework\csedterm6\compilers\project\phase2\lanalayzer + parser\include\minimization.h
 	<bits/stdc++.h>
 
-1587857878 source:d:\nada\collegework\csedterm6\compilers\project\phase2\lanalayzer + parser\src\first.cpp
+1588008048 source:d:\nada\collegework\csedterm6\compilers\project\phase2\lanalayzer + parser\src\first.cpp
 	"First.h"
 	<iostream>
 	<fstream>
@@ -305,7 +305,7 @@
 	<bits/stdc++.h>
 	<map>
 
-1587678199 source:d:\nada\collegework\csedterm6\compilers\project\phase2\lanalayzer + parser\src\minimization.cpp
+1589600207 source:d:\nada\collegework\csedterm6\compilers\project\phase2\lanalayzer + parser\src\minimization.cpp
 	"Minimization.h"
 	<iostream>
 	<iterator>
@@ -334,7 +334,7 @@
 	<string>
 	"First.h"
 
-1587954458 source:d:\nada\collegework\csedterm6\compilers\project\phase2\lanalayzer + parser\src\parsing.cpp
+1588007905 source:d:\nada\collegework\csedterm6\compilers\project\phase2\lanalayzer + parser\src\parsing.cpp
 	"Parsing.h"
 	<iostream>
 	<stack>
@@ -375,15 +375,16 @@
 	<map>
 	"Re_to_NFA.h"
 
-1587685373 source:d:\nada\collegework\csedterm6\compilers\project\phase2\lanalayzer + parser\src\testanalyzer.cpp
+1589601908 source:d:\nada\collegework\csedterm6\compilers\project\phase2\lanalayzer + parser\src\testanalyzer.cpp
 	"TestAnalyzer.h"
 	<iostream>
 	<fstream>
+	<ctype.h>
 
 1587149137 d:\nada\collegework\csedterm6\compilers\project\phase2\lanalayzer + parser\include\testanalyzer.h
 	"Minimization.h"
 
-1587941272 source:d:\nada\collegework\csedterm6\compilers\project\phase2\lanalayzer + parser\main.cpp
+1589600490 source:d:\nada\collegework\csedterm6\compilers\project\phase2\lanalayzer + parser\main.cpp
 	<iostream>
 	<bitset>
 	<vector>
